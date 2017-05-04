@@ -6,3 +6,6 @@ models
 *.p
 linux_sim
 *.npy
+data_alternative
+data_combined
+data_training
