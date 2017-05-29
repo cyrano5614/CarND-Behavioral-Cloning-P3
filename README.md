@@ -29,11 +29,8 @@ In this project we will build a convolution neural network to mimic human drivin
 [image13]: ./images/
 
 ---
-
-|Lake Track|Jungle Track|
-|:--------:|:------------:|
-|[![Lake Track](images/lake_track.png)](https://)|[![Jungle Track](images/jungle_track.png)](https://)|
-|[YouTube Link](https://)|[YouTube Link](https://)|
+Track1
+|[![Lake Track](track_1.mp4)](https://)
 
 ---
 
