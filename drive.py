@@ -46,7 +46,7 @@ class SimplePIController:
 
 
 controller = SimplePIController(0.1, 0.002)
-set_speed = 21
+set_speed = 30
 controller.set_desired(set_speed)
 
 
@@ -65,11 +65,18 @@ def telemetry(sid, data):
 
         image_array = np.asarray(image)
 
-        #NOTE: Added after image resizing
-        image = np.array(image)
-        new_column, new_row = 200, 66
-        image = cv2.resize(image, (new_column, new_row))
-        resized_image = image[None, :, :, :]
+        # #NOTE: Added after image resizing
+        # image = np.array(image)
+        # image = image[50:140, : ] # Crop image just like model was triained
+        new_column, new_row = 200, 66 # Resize image just like model was trained
+        # image = cv2.resize(image, (new_column, new_row))
+        # resized_image = image[None, :, :, :]
+        compute_img = np.copy(image)
+        compute_img = np.array(compute_img)
+        compute_img = cv2.resize(compute_img, (new_column, new_row))
+        resized_image = compute_img[None, :, :, :]
+
+
         steering_angle = float(model.predict(resized_image, batch_size=1))
 
         # steering_angle = float(model.predict(image_array[None, :, :, :], batch_size=1))

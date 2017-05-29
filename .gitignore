@@ -1,7 +1,6 @@
 data
 .ipynb_checkpoints
 *.h5
-models
 *.swp
 *.p
 linux_sim
@@ -9,3 +8,6 @@ linux_sim
 data_alternative
 data_combined
 data_training
+data_new
+track_1
+track_2
